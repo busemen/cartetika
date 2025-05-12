@@ -26,7 +26,7 @@ def cities_by_year(year):
                     "type": "Point",
                     "coordinates": [row['longitude'], row['latitude']]
                 },
-                "properties": list(row)
+                "properties": dict(row)
             }
             for row in cities
         ]
@@ -40,7 +40,7 @@ def cities_by_year(year):
     print("--- %s seconds ---" % (time.time() - start_time))
     return r
 
-@app.route("/city/<id>")
+@app.route("/city/<int:id>")
 def city_by_id(id):
     start_time = time.time()
     db = sqlite3.connect(DB_LOCATION)

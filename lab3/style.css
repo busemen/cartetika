@@ -4,4 +4,13 @@
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: -1;
 }
+
+/* #city-details-modal {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 300px;
+} */
